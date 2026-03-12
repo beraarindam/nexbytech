@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                  </div>
                                  <div class="col-lg-12 mb-4">
-                                    <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+                                    <div class="g-recaptcha" data-sitekey="6LdMYIgsAAAAAI6ggz9tDwb7ff_X8uRRpIPkQwyn"></div>
                                  </div>
                                  <div class="row align-items-center">
                                     <div class="col-xl-3 col-md-4 col-sm-4 pr-0">
