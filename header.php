@@ -265,18 +265,18 @@ $page_keywords = isset($seo_data[$current_page]) ? $seo_data[$current_page]['key
                   <div class="top_bar_contact_item">
                     <div class="top_bar_icon"><i class="flaticon-mail"></i>
                     </div>
-                    <a href="mailto:info@nexbytech.com">info@nexbytech.com</a>
+                    <a href="mailto:info@nexbytechsolutions.com">info@nexbytechsolutions.com</a>
                   </div>
                   <div class="top_bar_contact_item">
                     <div class="top_bar_icon"><i class="ti-location-pin"></i>
                     </div>
-                    Your City, Your State
+                    Kolkata, Salt Lake Sector V, 700091
                   </div>
                   <div class="top_bar_contact_item">
                     <div class="top_bar_icon"><i class="flaticon-phone-call">
                       </i>
                     </div>
-                    <a href="tel:1234567890">+1 (002) 123-4567</a>
+                    <a href="tel:+918825148127">+91 8825148127</a>
                   </div>
                   <div class="top_bar_contact_item top_bar_social ms-auto">
                     <ul class="social-icons">
@@ -309,9 +309,9 @@ $page_keywords = isset($seo_data[$current_page]) ? $seo_data[$current_page]['key
                   <!--site-navigation -->
                   <div class="site-navigation d-flex flex-row">
                     <!-- site-branding -->
-                    <div class="site-branding me-auto">
-                      <a class="home-link" href="index" title="Nexbytech" rel="home">
-                        <img id="logo-img" class="img-center" src="images/logo_demo1.svg" alt="logo-img">
+                    <div class="site-branding me-auto d-flex align-items-center">
+                      <a class="home-link d-inline-flex align-items-center" href="index" title="Nexbytech" rel="home">
+                        <img id="logo-img" class="img-center" src="images/logo_dark.png" alt="Nexbytech logo" style="max-height:100px; width:auto;">
                       </a>
                     </div>
                     <!-- site-branding end -->

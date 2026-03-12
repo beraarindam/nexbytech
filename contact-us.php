@@ -240,7 +240,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                        <h3>Need help?</h3>
                                     </div>
                                     <div class="featured-desc">
-                                       <p class="m-0"> <a href="tel:0055645000">+00 55 645 000 </a>  /   <a href="8005559876">+1 (800) 555-9876</a><br> <a href="mailto:information@business.com">information@business.com</a></p>
+                                       <p class="m-0">
+                                         <a href="tel:+918825148127">+91 8825148127</a><br>
+                                         <a href="mailto:info@nexbytechsolutions.com">info@nexbytechsolutions.com</a>
+                                       </p>
                                     </div>
                                  </div>
                               </div>
@@ -257,7 +260,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                        <h3>Location info</h3>
                                     </div>
                                     <div class="featured-desc">
-                                       <p class="elementor-icon-box-description mb-0"> 1234 East 27th Street, Fifteen Floor, NY 1010<br> <a href="#" class="text-decoration-underline" target="_blank" rel="noopener">Location on map</a></p>
+                                       <p class="elementor-icon-box-description mb-0"> Kolkata, Salt Lake Sector V, 700091<br> <a href="#" class="text-decoration-underline" target="_blank" rel="noopener">Location on map</a></p>
                                     </div>
                                  </div>
                               </div>
@@ -300,7 +303,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                               </div>
                               <div class="prt-img-btn">
                                  <div class="prt-iocnbox-btn">
-                                    <a href="tel:1234567890"><span>Call us: +123 (4567) 890</span></a>
+                                    <a href="tel:+918825148127"><span>Call us: +91 8825148127</span></a>
                                  </div>  
                               </div>
                            </div>

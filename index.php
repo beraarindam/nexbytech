@@ -194,7 +194,7 @@
                           </div>
                           <div class="prt-iconbox-heading">
                             <div class="prt-contact-info">
-                              <a href="tel:1234567890">123-4567-890</a>
+                              <a href="tel:+918825148127">+91 8825148127</a>
                             </div>
                             <div class="prt-content-wrapper">
                               <p class="m-0">Around-the-Clock service available</p>

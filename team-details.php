@@ -56,11 +56,11 @@
                                    <ul class="prt-team-details-list mb-0 p-0">
                                       <li>
                                          <div class="prt-team-list-title"> Phone call :</div>
-                                         <div class="prt-team-list-value mb-10"><a href="tel:+18002145678">+1800 200 145678</a></div>
+                                         <div class="prt-team-list-value mb-10"><a href="tel:+918825148127">+91 8825148127</a></div>
                                       </li>
                                       <li>
                                          <div class="prt-team-list-title"> Send email :</div>
-                                         <div class="prt-team-list-value"><a href="mailto:info@example.com">info.support@example.com</a></div>
+                                         <div class="prt-team-list-value"><a href="mailto:info@nexbytechsolutions.com">info@nexbytechsolutions.com</a></div>
                                       </li>
                                        <li>
                                          <div class="prt-team-list-title">Experience   :</div>

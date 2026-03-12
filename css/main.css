@@ -1040,13 +1040,13 @@ ul.social-icons{
 
 .site-branding h1{margin-bottom: 0; line-height: 0;}
 .site-branding #logo-img{
-    max-width: 110px;
+    max-width: 220px;
     z-index: 1;
     position: relative;
     top: -1px;
 }
 .prt-header-style-04 .site-branding #logo-img{
-    max-width: 117px;
+    max-width: 192px;
 }
 /** SiteNavigation(Menu) **/
 

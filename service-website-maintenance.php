@@ -106,7 +106,7 @@
                     <div class="prt-sidebar-subheading">Keep your site healthy</div>
                     <div class="prt-sidebar-heading">Ask about our maintenance plans.</div>
                     <div class="prt-sidebar-phone">
-                      <span class="link-text"><a href="tel:1234567890"><i class="flaticon-phone-call"></i> +123 (4567) 890</a></span>
+                      <span class="link-text"><a href="tel:+918825148127"><i class="flaticon-phone-call"></i> +91 8825148127</a></span>
                     </div>
                   </div>
                 </div>

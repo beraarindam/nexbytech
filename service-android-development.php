@@ -107,7 +107,7 @@
                     <div class="prt-sidebar-subheading">Go mobile</div>
                     <div class="prt-sidebar-heading">Launch your Android app with us.</div>
                     <div class="prt-sidebar-phone">
-                      <span class="link-text"><a href="tel:1234567890"><i class="flaticon-phone-call"></i> +123 (4567) 890</a></span>
+                      <span class="link-text"><a href="tel:+918825148127"><i class="flaticon-phone-call"></i> +91 8825148127</a></span>
                     </div>
                   </div>
                 </div>

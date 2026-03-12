@@ -39,7 +39,7 @@
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
           <div class="widget widget_text clearfix footer-widget-box">
             <div class="footer-logo pb-15">
-              <img src="images/logo_demo1.svg" alt="single-img">
+              <img src="images/logo_dark.png" alt="Nexbytech logo" style="max-height:80px; width:auto;">
             </div>
             <div class="textwidget widget-text footer-widget-box">
               Nexbytech is a web development company. We build custom websites, web applications, and provide design,
@@ -96,7 +96,7 @@
           <div class="footer-contactbox">
             <div class="prt-about-footer mb-45">
               <h3 class="widget-title">Address</h3>
-              <p class="m-0">Your Address, Your City, Your State.</p>
+              <p class="m-0">Kolkata, Salt Lake Sector V, 700091</p>
             </div>
             <h3 class="widget-title">Opening hours</h3>
             <ul class="prt-contact-widget-detail pl-0">
