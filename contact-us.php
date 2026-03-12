@@ -1,4 +1,9 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/vendor/autoload.php';
+
 $msg = '';
 $msgClass = '';
 
@@ -21,10 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $responseData = json_decode($verifyResponse);
 
         if ($responseData && $responseData->success) {
-            $to = 'abera0275@gmail.com'; // Change this to your email
+            $to = 'abera0275@gmail.com'; // Admin email
             $subject = "New Inquiry: $subject_txt";
             $body = "Name: $name\nEmail: $email\nPhone: $phone\nService: $service\nSubject: $subject_txt\nMessage/Address:\n$address";
-            $headers = "From: $email\r\nReply-To: $email";
 
             // Optional: send data to Google Sheets via Apps Script Web App
             // Replace the URL below with your deployed Apps Script Web App URL.
@@ -41,11 +45,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Fire-and-forget request; ignore response/errors so the form still works
             @file_get_contents($googleScriptUrl . '?' . http_build_query($sheetPayload));
 
-            if (@mail($to, $subject, $body, $headers)) {
+            // ---------- PHPMailer (SMTP) ----------
+            $mail = new PHPMailer(true);
+
+            try {
+                // Server settings - replace with your real SMTP details
+                $mail->isSMTP();
+                $mail->Host       = 'smtp.hostinger.com';           // e.g. smtp.yourdomain.com
+                $mail->SMTPAuth   = true;
+                $mail->Username   = 'info@nexbytechsolutions.com';       // e.g. no-reply@nexbytechsolutions.com
+                $mail->Password   = '@Arindam2003';       // SMTP password or app password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS
+                $mail->Port       = 587;                        // 587 TLS, 465 SSL
+
+                // Recipients
+                $mail->setFrom('info@nexbytechsolutions.com', 'Nexbytech Website');
+                $mail->addAddress($to);
+
+                // Content
+                $mail->Subject = $subject;
+                $mail->Body    = $body;
+
+                $mail->send();
                 $msg = 'Your message has been sent successfully!';
                 $msgClass = 'alert-success';
-            } else {
-                $msg = 'reCAPTCHA passed, but mail() failed. This is normal on localhost if Sendmail isn\'t configured.';
+            } catch (Exception $e) {
+                $msg = 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo;
                 $msgClass = 'alert-warning';
             }
         } else {
