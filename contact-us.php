@@ -49,24 +49,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail = new PHPMailer(true);
 
             try {
-                // Server settings - replace with your real SMTP details
+                // Server settings - Hostinger SMTP
                 $mail->isSMTP();
-                $mail->Host       = 'smtp.hostinger.com';           // e.g. smtp.yourdomain.com
+                $mail->Host       = 'smtp.hostinger.com';
                 $mail->SMTPAuth   = true;
-                $mail->Username   = 'info@nexbytechsolutions.com';       // e.g. no-reply@nexbytechsolutions.com
-                $mail->Password   = '@Arindam2003';       // SMTP password or app password
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or ENCRYPTION_SMTPS
-                $mail->Port       = 587;                        // 587 TLS, 465 SSL
+                $mail->Username   = 'info@nexbytechsolutions.com';
+                $mail->Password   = '@Arindam2003'; // SMTP password or app password
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->Port       = 587;
 
-                // Recipients
+                // Common headers
                 $mail->setFrom('info@nexbytechsolutions.com', 'Nexbytech Website');
+
+                // -------- 1) Send notification to admin --------
+                $mail->clearAddresses();
                 $mail->addAddress($to);
 
-                // Content
+                $adminTextBody = $body;
+                $adminHtmlBody = '<html><body style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;">
+                    <h2 style="margin-bottom:10px;">New enquiry from website</h2>
+                    <p><strong>Name:</strong> ' . htmlspecialchars($name) . '</p>
+                    <p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
+                    <p><strong>Phone:</strong> ' . htmlspecialchars($phone) . '</p>
+                    <p><strong>Service:</strong> ' . htmlspecialchars($service) . '</p>
+                    <p><strong>Subject:</strong> ' . htmlspecialchars($subject_txt) . '</p>
+                    <p><strong>Message / Address:</strong><br>' . nl2br(htmlspecialchars($address)) . '</p>
+                </body></html>';
+
+                $mail->isHTML(true);
                 $mail->Subject = $subject;
-                $mail->Body    = $body;
+                $mail->Body    = $adminHtmlBody;
+                $mail->AltBody = $adminTextBody;
 
                 $mail->send();
+
+                // -------- 2) Send thank-you email to user --------
+                $mail->clearAddresses();
+                $mail->addAddress($email);
+
+                $thankSubject = 'Thank you for contacting Nexbytech';
+                $thankHtmlBody = '<html><body style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;">
+                    <div style="max-width:600px;margin:0 auto;padding:24px;border-radius:8px;background:#f7f9fc;">
+                        <h2 style="margin-top:0;margin-bottom:12px;color:#0b3c71;">Thank you, ' . htmlspecialchars($name) . '!</h2>
+                        <p>We\'ve received your enquiry about <strong>' . htmlspecialchars($service) . '</strong>.</p>
+                        <p>Our team will review your message and get back to you as soon as possible, typically within one business day.</p>
+                        <p style="margin-top:20px;margin-bottom:8px;"><strong>Your details</strong></p>
+                        <p style="margin:0;"><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
+                        <p style="margin:0 0 8px 0;"><strong>Phone:</strong> ' . htmlspecialchars($phone) . '</p>
+                        <p style="margin-top:8px;"><strong>Message:</strong><br>' . nl2br(htmlspecialchars($address)) . '</p>
+                        <p style="margin-top:24px;">Best regards,<br>The Nexbytech Team</p>
+                    </div>
+                </body></html>';
+
+                $mail->Subject = $thankSubject;
+                $mail->Body    = $thankHtmlBody;
+                $mail->AltBody = "Thank you, $name!\n\nWe have received your enquiry about $service and will get back to you as soon as possible.\n\nBest regards,\nNexbytech Team";
+
+                $mail->send();
+
                 $msg = 'Your message has been sent successfully!';
                 $msgClass = 'alert-success';
             } catch (Exception $e) {
