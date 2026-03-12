@@ -144,6 +144,11 @@
   <i class="ti-arrow-up"></i>
 </a>
 <!-- back-to-top end -->
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/918825148127" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+</a>
 </div>
 <!-- page end -->
 <!-- Javascript -->

@@ -302,7 +302,7 @@ $page_keywords = isset($seo_data[$current_page]) ? $seo_data[$current_page]['key
         <!-- topbar end -->
         <!-- site-header-menu -->
         <div id="site-header-menu" class="site-header-menu prt-bgcolor-white">
-          <div class="site-header-menu-inner prt-stickable-header">
+          <div class="site-header-menu-inner prt-stickable-header" style="background: #00246e;">
             <div class="container-fluid ">
               <div class="row">
                 <div class="col-lg-12">
