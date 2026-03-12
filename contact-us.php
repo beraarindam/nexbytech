@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $responseData = json_decode($verifyResponse);
 
         if ($responseData && $responseData->success) {
-            $to = 'abera0275@gmail.com'; // Admin email
+            $to = 'info@nexbytechsolutions.com'; // Admin email
             $subject = "New Inquiry: $subject_txt";
             $body = "Name: $name\nEmail: $email\nPhone: $phone\nService: $service\nSubject: $subject_txt\nMessage/Address:\n$address";
 
