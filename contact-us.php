@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $msgClass = 'alert-danger';
     } else {
         // Using Google's standard test keys for localhost testing
-        $secret = '6LdMYIgsAAAAAI6ggz9tDwb7ff_X8uRRpIPkQwyn';
+        $secret = '6LdMYIgsAAAAABBP6x6qq1HkqHOlpBgfXw9TI4UP';
         $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$recaptchaResponse);
         $responseData = json_decode($verifyResponse);
 
