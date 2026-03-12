@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $msgClass = 'alert-danger';
     } else {
         // Using Google's standard test keys for localhost testing
-        $secret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
+        $secret = '6LdMYIgsAAAAABBP6x6qq1HkqHOlpBgfXw9TI4UP';
         $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$recaptchaResponse);
         $responseData = json_decode($verifyResponse);
 
         if ($responseData && $responseData->success) {
-            $to = 'admin@yoursite.com'; // Change this to your email
+            $to = 'abera0275@gmail.com'; // Change this to your email
             $subject = "New Inquiry: $subject_txt";
             $body = "Name: $name\nEmail: $email\nPhone: $phone\nService: $service\nSubject: $subject_txt\nMessage/Address:\n$address";
             $headers = "From: $email\r\nReply-To: $email";
